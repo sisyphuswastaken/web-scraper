@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# Scraping
+trafilatura
+
+# NLP
+spacy
+rapidfuzz
+
+# Graph
+networkx
+
+# LLM integration to be added 
