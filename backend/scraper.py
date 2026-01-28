@@ -27,6 +27,9 @@ def _enforce_rate_limit(url: str, delay: float = 1.0):
     
     _last_request_time[domain] = time.time()
 
+# need to add mechanism where it only scrapes robots.txt otherwise I might get banned >.<
+# need to add powerful parser for js only websites where they serve no content w html (medium/reddit)
+# in case of failure, log that website url and move on
 
 def _fetch_with_retry(url: str, max_retries: int = 3, timeout: int = 10):
     headers = {
