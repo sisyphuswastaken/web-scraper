@@ -77,6 +77,13 @@ function App() {
     setCurrentStep('');
   };
 
+  const handleReset = () => {
+    setGraphData(null);
+    setError(null);
+    setProgress(0);
+    setCurrentStep('');
+  };
+
   return (
     <div className="app">
       <header className="app-header">
@@ -110,6 +117,11 @@ function App() {
               loading={loading}
               error={error}
             />
+            <div className="process-another-container">
+              <button className="process-another-button" onClick={handleReset}>
+                ↩ Process another URL
+              </button>
+            </div>
           </div>
         )}
       </main>
